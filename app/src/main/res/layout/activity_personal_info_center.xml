@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ruanko="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical"
+    tools:context="com.itee.exam.app.ui.personal.PersonalInfoCenter">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="#f3f3f3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/personal_def_infohead"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#bbbbbb"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <com.itee.exam.app.widget.RKImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:src="@drawable/customer_default"
+                ruanko:border_color="@android:color/transparent"
+                ruanko:border_width="0dp"
+                ruanko:shape_type="round"
+                android:visibility="gone"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@color/White"
+                android:clickable="true"
+                android:onClick="funPersonalInfo">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/personal_list_icon_message_d"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/iv_msg"/>
+
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:layout_marginRight="41dp"/>
+
+                <TextView
+                    android:id="@+id/personal_list_item_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="我的信息"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/explain_font"
+                    android:layout_marginLeft="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_msg"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@color/White"
+                android:clickable="true"
+                android:onClick="funPersonalSignInfo">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/personal_list_icon_message_d"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/sign_info"/>
+
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_sign_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:layout_marginRight="41dp"/>
+
+                <TextView
+                    android:id="@+id/personal_list_item_info_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="软考报名信息"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/explain_font"
+                    android:layout_marginLeft="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/sign_info"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@color/White"
+                android:clickable="true"
+                android:onClick="funExamHistory">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/personal_list_icon_exam_d"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/iv_exam"/>
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:layout_marginRight="41dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="我的考试"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/explain_font"
+                    android:layout_marginLeft="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_exam"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@color/White"
+                android:clickable="true"
+                android:onClick="funOrderRecord">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/personal_list_icon_record_d"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/iv_history"/>
+
+                <ImageView
+                    android:id="@+id/personal_list_item_order_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:layout_marginRight="41dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="订单记录"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/explain_font"
+                    android:layout_marginLeft="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_history"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:clickable="true"
+                android:onClick="funDeleteExamHistory"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/android_list_index" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_3"
+                    android:ellipsize="end"
+                    android:paddingLeft="15.0dip"
+                    android:singleLine="true"
+                    android:text="删除考试记录"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/android_list_index" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_6"
+                    android:ellipsize="end"
+                    android:paddingLeft="15.0dip"
+                    android:singleLine="true"
+                    android:text="完善报名信息"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@color/White"
+                android:clickable="true"
+                android:onClick="funDeleteCache">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/personal_list_icon_refresh_d"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/iv_delete"/>
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:layout_marginRight="41dp"/>
+
+                1<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="清除缓存"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/explain_font"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_delete"
+                android:layout_marginLeft="11dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@color/White"
+                android:clickable="true"
+                android:onClick="funChangePassword">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/personal_list_icon_password_d"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/iv_change"/>
+
+                <ImageView
+                    android:id="@+id/personal_list_item_change_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:layout_marginRight="41dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_toRightOf="@+id/iv_change"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="修改密码"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/explain_font"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bbbbbb"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/android_list_index" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_4"
+                    android:ellipsize="end"
+                    android:paddingLeft="15.0dip"
+                    android:singleLine="true"
+                    android:text="设置"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/big_image_show"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#ffebebeb"
+    tools:context="com.itee.exam.app.ui.image.ImageActivity">
+
+    <com.itee.exam.app.ui.image.MyGallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffebebeb"
+        android:gravity="center"
+        android:spacing="1dp">
+
+    </com.itee.exam.app.ui.image.MyGallery>
+
+</RelativeLayout>

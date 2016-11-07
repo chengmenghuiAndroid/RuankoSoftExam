@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/change_psw_btn_space"
+        android:text="全国计算机技术与软件专业技术资格考试"
+        android:textColor="@color/title_exam"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/change_psw_btn_space"
+        android:src="@drawable/common_icon_computer"/>
+
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/change_psw_btn_space"
+        android:background="@drawable/android_cancel_btn"
+        android:id="@+id/ll_exam">
+
+            <TextView
+                android:id="@+id/tv_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="选择科目"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/common_radiobtn_icon_down_white"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_short_margin"
+        android:background="@drawable/android_cancel_btn"
+        android:id="@+id/exam_type">
+
+            <TextView
+                android:id="@+id/tv_exam2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="选择上/下午卷"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/common_radiobtn_icon_down_white"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_short_margin"
+        android:background="@drawable/android_cancel_btn"
+        android:id="@+id/select_exam">
+
+            <TextView
+                android:id="@+id/tv_exam3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="请选择试卷"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:layout_marginRight="50dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/common_radiobtn_icon_down_white"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="155dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/change_psw_btn_height"
+        android:background="@drawable/android_exam_begin"
+        android:id="@+id/rl_exam_begin">
+
+            <TextView
+                android:id="@+id/tv_exam_begin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始测试"
+                android:textColor="@color/BACK"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

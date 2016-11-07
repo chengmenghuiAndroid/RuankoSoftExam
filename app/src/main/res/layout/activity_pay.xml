@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".app.ui.signup.PayActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_pay_subject_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="报名费"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/toolbar_font"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_payment_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:singleLine="true"
+        android:text="0.01"
+        android:textColor="@color/money_text"
+        android:textSize="@dimen/time_font"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="支付方式"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/explain_font"
+        android:textStyle="normal" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ali_pay" />
+
+        <RadioButton
+            android:id="@+id/rb_weixinpay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/weixin_pay"
+            android:visibility="visible"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cb_pay_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:checked="true"
+        android:layout_marginTop="10dp"
+        android:text="我同意《软酷网-软考报名服务协议》"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/normal_font"
+        android:textStyle="normal"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/light_btn"
+        android:onClick="funPay"
+        android:text="支付报名费"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_font" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="10dp"
+            android:text="@string/pay_remark"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/normal_font"
+            android:textStyle="normal" />
+    </ScrollView>
+</LinearLayout>

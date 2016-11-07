@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical"
+    tools:context=".app.ui.signup.SignUpActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/list_corners_default"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="手 机 号："
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/et_sign_up_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:inputType="phone"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_temp_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="验 证 码："
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/et_security_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btn_get_security_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onGetCodeClick"
+                android:text="获取验证码"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="姓    名："
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/et_sign_up_realname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="报名省份："
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="湖北省"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="报名科目："
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/sp_exam_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:background="@drawable/spinner_bg"
+                android:spinnerMode="dialog"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="报 名 点："
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/sp_apply_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:background="@drawable/spinner_bg"
+                android:spinnerMode="dialog"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBDBDB" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="目前报名获得的报名号可用于2016年下半年报考"
+            android:textColor="@color/Black"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </TableLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_margin="10dp"
+        android:background="#CC6600"
+        android:lineSpacingMultiplier="1.2"
+        android:onClick="funNext"
+        android:text="开始报名"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_font" />
+</LinearLayout>

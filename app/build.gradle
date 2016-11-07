@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+Properties props = new Properties()
+props.load(new FileInputStream(file(rootProject.file("signing.properties"))))
+
+android {
+
+    signingConfigs {
+        release {
+            keyAlias props['signing.alias']
+            keyPassword props['signing.password']
+            storeFile file(rootProject.file("debug.keystore"))
+            storePassword props['signing.password']
+        }
+
+        debug {
+            keyAlias props['signing.jjdxm_alias']
+            keyPassword props['signing.jjdxm_password']
+            storeFile file(rootProject.file("debug.keystore"))
+            storePassword props['signing.jjdxm_password']
+        }
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.itee.exam"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 4
+        versionName "2.0"
+        multiDexEnabled true
+        ndk{
+            moduleName "payJni"
+        }
+    }
+    buildTypes {
+        release {
+            //Zipalign优化
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //视频配置
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        /**
+         *视频配置文件
+         *
+         */
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':multi-image-selector')
+    //视频配置文件
+    compile project(':jjdxm-ijkplayer')
+    compile rootProject.ext.jjdxm_v7
+    testCompile 'junit:junit:4.12'
+
+//    需要使用这两个库但又想最小版本能够兼容自身的项目可以使用以下的类库去替换上面的，so文件和上面的是一样的，最是在最低版本上做了修改
+    compile 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:1.0.0'
+    compile 'com.dou361.ijkplayer-armv5:jjdxm-ijkplayer-armv5:1.0.0'
+    compile 'com.dou361.ijkplayer-arm64:jjdxm-ijkplayer-arm64:1.0.0'
+    compile 'com.dou361.ijkplayer-x86:jjdxm-ijkplayer-x86:1.0.0'
+    compile 'com.dou361.ijkplayer-x86_64:jjdxm-ijkplayer-x86_64:1.0.0'
+
+
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.ogaclejapan.smarttablayout:library:1.1.3@aar'
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.1.3@aar'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.google.zxing:core:3.2.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.bm.photoview:library:1.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile files('libs/universal-image-loader-1.9.4.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/jpush-android-2.1.7.jar')
+    compile files('libs/alipaySdk-20160809.jar')
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6'
+    compile 'com.yolanda.nohttp:nohttp:+'
+}

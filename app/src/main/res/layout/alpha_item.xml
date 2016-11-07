@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_alphaitem_tv_alpha"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#31b5ff"-->
+        <!--android:gravity="center_vertical">-->
+        <TextView
+            android:background="#31b5ff"
+            android:id="@+id/alphaitem_tv_alpha"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="14sp"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="常用 "
+            android:textColor="#ffffff"
+            android:clickable="true"
+            android:singleLine="true"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/circle_dot"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/alphaitem_tv_alpha">
+
+        <TextView
+            android:id="@+id/alphaitem_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#232323"
+            android:paddingLeft="15dp"
+            android:textSize="16sp"
+            android:text="中国"
+            android:tag="软考"
+            android:layout_centerVertical="true"
+            />
+
+        <View
+            android:id="@+id/vi_line"
+            android:layout_width="0.5dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="14dp"
+            android:background="#bbbbbb"
+            android:layout_toRightOf="@id/alphaitem_tv_content"/>
+
+        <TextView
+            android:id="@+id/countryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#232323"
+            android:paddingRight="15dp"
+            android:textSize="16sp"
+            android:text="86"
+            android:tag="123123123123123"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/vi_line"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

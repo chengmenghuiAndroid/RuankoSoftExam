@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="选择科目"
+        android:textColor="@color/black"
+        android:textSize="@dimen/choice_item_font"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bord_gray" />
+
+    <Spinner
+        android:id="@+id/sp_exam_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dialog"
+        android:textColor="@color/Black"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bord_gray" />
+
+    <LinearLayout
+        android:id="@+id/date_dialog_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btn_date_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/update_dialog_cancel"
+            android:text="取消"
+            android:textColor="@color/normal_font"
+            android:textSize="@dimen/explain_font" />
+
+        <Button
+            android:id="@+id/btn_date_dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/update_dialog_ok"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/explain_font" />
+    </LinearLayout>
+</LinearLayout>

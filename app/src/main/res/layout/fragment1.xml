@@ -1,0 +1,260 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="姓    名："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_apply_real_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="张三"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal"
+            android:visibility="gone"/>
+        <EditText
+            android:id="@+id/et_apply_real_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请保持和自己身份证上姓名一致"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/Black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="性    别："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_apply_user_sex_male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="男"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/rb_apply_user_sex_female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="女"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="证件类型："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <Spinner
+            android:id="@+id/sp_certificates_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/idcard_type"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="证件号码："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/et_certificates_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789xX"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="出 生 地："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/et_birth_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="报考省份："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="湖北省"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="所在市区："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/et_cur_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+           android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="出生日期："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/tv_birthdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:hint="格式:20160101"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal"/>
+    </LinearLayout>
+</LinearLayout>

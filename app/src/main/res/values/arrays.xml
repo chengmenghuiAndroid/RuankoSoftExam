@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exam_subjects">
+        <item>程序员</item>
+        <item>网络管理员</item>
+        <item>多媒体应用技术制作员</item>
+        <item>电子商务技术员</item>
+        <item>信息系统运行管理员</item>
+        <item>网页制作员</item>
+        <item>信息处理技术员</item>
+        <item>软件评测师</item>
+        <item>软件设计师</item>
+        <item>软件过程能力评估师</item>
+        <item>网络工程师</item>
+        <item>多媒体应用设计师</item>
+        <item>嵌入式系统设计师</item>
+        <item>计算机辅助设计师</item>
+        <item>电子商务设计师</item>
+        <item>系统集成项目管理工程师</item>
+        <item>信息系统监理师</item>
+        <item>信息安全工程师</item>
+        <item>数据库系统工程师</item>
+        <item>信息系统管理工程师</item>
+        <item>信息安全工程师</item>
+        <item>计算机硬件工程师</item>
+        <item>信息技术支持工程师</item>
+        <item>信息系统项目管理师</item>
+        <item>网络规划设计师</item>
+        <item>系统架构设计师</item>
+        <item>系统分析师</item>
+        <item>系统规划与管理师</item>
+    </string-array>
+
+    <string-array name="icon_choose">
+        <item>拍照</item>
+        <item>从相册中选择</item>
+    </string-array>
+
+    <string-array name="sex">
+        <item>保密</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string-array name="filter_menus">
+        <item>热门搜索</item>
+        <item>系统支持</item>
+        <item>操作系统</item>
+    </string-array>
+
+    <string-array name="buy_hours">
+        <item>1小时</item>
+        <item>2小时</item>
+        <item>3小时</item>
+        <item>4小时</item>
+        <item>5小时</item>
+    </string-array>
+
+    <string-array name="order_status">
+        <item>待支付</item>
+        <item>待处理</item>
+        <item>已完成</item>
+        <item>取消订单审核中</item>
+        <item>申述订单审核中</item>
+    </string-array>
+
+    <string-array name="msg_arr_content" >
+        <item>删除</item>
+        <item>全部删除</item>
+        <item>标记已读</item>
+        <item>全部已读</item>
+    </string-array>
+    <string-array name="contact_arr_content" >
+        <item>删除</item>
+    </string-array>
+
+    <string-array name="education" >
+        <item>高中</item>
+        <item>专科</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>博士</item>
+    </string-array>
+</resources>

@@ -1,0 +1,466 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="最高学历："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/sp_highest_edu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_bg"
+                android:entries="@array/max_edu_bg"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="最高学位："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/sp_highest_degree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_bg"
+                android:entries="@array/max_edu_level"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="最高学历毕业院校/在读院校："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_colleges_type_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="湖北省内高校"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <RadioButton
+                    android:id="@+id/rb_colleges_type_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="湖北省内非高校"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <RadioButton
+                    android:id="@+id/rb_colleges_type_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="湖北省外"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="学校完整名称："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/et_colleges_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="入学时间："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/et_entrance_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="格式:20040901"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="所学专业与报考科目："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_pro_sub_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="相同"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <RadioButton
+                    android:id="@+id/rb_pro_sub_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="相近"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <RadioButton
+                    android:id="@+id/rb_pro_sub_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="不同"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="职业状态："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_occupation_state_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="在职"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <RadioButton
+                    android:id="@+id/rb_occupation_state_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="在读"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <RadioButton
+                    android:id="@+id/rb_occupation_state_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="无业"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_company_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="单位类别："
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/sp_company_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_bg"
+                    android:entries="@array/administrative_unit_type"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="单位名称："
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/et_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="已有职称："
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/sp_job_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_bg"
+                    android:entries="@array/job_title"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_colleges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="院系名称："
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/et_faculties"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:text="专业班级："
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/et_professional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="true"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/explain_font"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

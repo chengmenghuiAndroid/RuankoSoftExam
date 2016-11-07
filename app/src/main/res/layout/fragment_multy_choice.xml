@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/SeaGreen"
+        android:padding="3dp"
+        android:singleLine="true"
+        android:text="多选题"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_font" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="以下选项那些是正确的?"
+                    android:textColor="@color/normal_font"
+                    android:textSize="@dimen/normal_font" />
+
+                <ImageView
+                    android:id="@+id/imageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="200dp"
+                    android:minHeight="50dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/main_bg"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rgSelection"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:paddingTop="10dp"
+                    android:text="A.xxxxxxxx"
+                    android:textColor="@color/normal_font"
+                    android:textSize="@dimen/normal_font" />
+
+                <ImageView
+                    android:id="@+id/imageSelection1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="200dp"
+                    android:minHeight="50dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/main_bg"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewRightAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/SeaGreen"
+                        android:padding="3dp"
+                        android:text="正确答案"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normal_font" />
+
+                    <TextView
+                        android:id="@+id/tvRightAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="A"
+                        android:textColor="@color/SeaGreen"
+                        android:textSize="@dimen/title_font" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAnswerDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="xxxxxxxxxxxxxxxxxxxx"
+                    android:textColor="@color/normal_font"
+                    android:textSize="@dimen/normal_font" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

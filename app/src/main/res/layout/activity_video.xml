@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FloralWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="真题视频解析"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/video1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="86d64b96df8811e5b96200163e0236fc"
+                android:text="信息处理技术员2013-11真题视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/video2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="104f6496d6e511e5a2ae00163e0236fc"
+                android:text="程序员2015-11真题视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/video3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="3e500e9cd94311e5a2ae00163e0236fc"
+                android:text="软件设计师2015-11真题视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/video4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="239041c1402411e5859400163e0236fc"
+                android:text="软件评测师2014-11真题视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/video5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="17819409ef3811e5b96200163e0236fc"
+                android:text="信息系统项目管理师科目2:2015-11案例分析视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/video6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="f9980a2adad911e5a2ae00163e0236fc"
+                android:text="系统分析师科目2:2015-5案例分析视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/video7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="f142878ff25311e5b96200163e0236fc"
+                android:text="信息系统项目管理师科目3：典型论文视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/video8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:tag="a68d70abf25311e5b96200163e0236fc"
+                android:text="系统分析师科目3：典型论文视频解析"
+                android:textColor="@color/BlueViolet"
+                android:textSize="@dimen/choice_item_font"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

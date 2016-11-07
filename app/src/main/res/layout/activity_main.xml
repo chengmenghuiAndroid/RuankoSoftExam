@@ -1,0 +1,285 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MistyRose"
+    android:orientation="vertical"
+    tools:context="com.itee.exam.app.ui.MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/paper" />
+
+                <TextView
+                    android:id="@+id/tvExamSuject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="未选择科目"
+                    android:textColor="@color/normal_font"
+                    android:textSize="@dimen/normal_font" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/navigation_right" />
+
+                <TextView
+                    android:id="@+id/tvExamPaper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/exam_paper_null"
+                    android:textColor="@color/normal_font"
+                    android:textSize="@dimen/normal_font" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <View
+                android:id="@+id/viewCircle"
+                android:layout_width="360dp"
+                android:layout_height="360dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shap_circle_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/viewCircle"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="全国计算机技术与软件专业技术资格考试"
+                android:textColor="@color/gray_font"
+                android:textSize="@dimen/title_font" />
+
+            <TextView
+                android:id="@+id/tvCircle1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignLeft="@+id/viewCircle"
+                android:layout_alignTop="@+id/viewCircle"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/shap_circle_blue"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="Function1"
+                android:text="选择科目"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font" />
+
+            <ImageView
+                android:id="@+id/imgSeleted1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignBottom="@+id/tvCircle1"
+                android:layout_alignLeft="@+id/tvCircle1"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/select_ok" />
+
+            <TextView
+                android:id="@+id/tvCircle2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignRight="@+id/viewCircle"
+                android:layout_alignTop="@+id/viewCircle"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/shap_circle_green"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="Function2"
+                android:text="选择试卷\n上午"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font" />
+
+            <ImageView
+                android:id="@+id/imgSeleted2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignBottom="@+id/tvCircle2"
+                android:layout_alignLeft="@+id/tvCircle2"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/select_ok" />
+
+            <TextView
+                android:id="@+id/tvCircle3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@+id/viewCircle"
+                android:layout_alignLeft="@+id/viewCircle"
+                android:layout_marginBottom="55dp"
+                android:layout_marginLeft="55dp"
+                android:background="@drawable/shap_circle_orange"
+                android:clickable="true"
+                android:enabled="true"
+                android:gravity="center"
+                android:onClick="Function3"
+                android:text="选择试卷\n下午(一)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imgSeleted3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignBottom="@+id/tvCircle3"
+                android:layout_alignLeft="@+id/tvCircle3"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/select_ok"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvCircle4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@+id/viewCircle"
+                android:layout_alignRight="@+id/viewCircle"
+                android:layout_marginBottom="55dp"
+                android:layout_marginRight="55dp"
+                android:background="@drawable/shap_circle_red"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="Function4"
+                android:text="选择试卷\n下午(二)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imgSeleted4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignBottom="@+id/tvCircle4"
+                android:layout_alignLeft="@+id/tvCircle4"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/select_ok"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvCircle0"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shap_circle_orange_light"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="Function0"
+                android:text="真题考试"
+                android:textColor="@color/Feldspar"
+                android:textSize="@dimen/big_font" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bord_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:src="@drawable/training_checked" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:src="@drawable/error_statistic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:src="@drawable/news" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:src="@drawable/customer_info" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

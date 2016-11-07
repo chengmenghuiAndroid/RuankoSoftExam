@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="省份："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <Spinner
+            android:id="@+id/sp_address_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/province"
+            android:spinnerMode="dialog"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="地级市："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <Spinner
+            android:id="@+id/sp_address_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/province"
+            android:spinnerMode="dialog"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_county"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="县级市："
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+
+        <Spinner
+            android:id="@+id/sp_address_county"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/province"
+            android:spinnerMode="dialog"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/explain_font"
+            android:textStyle="normal" />
+    </LinearLayout>
+</LinearLayout>

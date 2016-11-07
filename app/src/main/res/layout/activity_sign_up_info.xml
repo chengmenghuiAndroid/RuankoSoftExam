@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.itee.exam.app.ui.signup.SignUpInfoActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/list_corners_default"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="报名科目："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_sign_up_info_subject_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_modify_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="修改"
+                android:textColor="@color/Blue"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="报名费用："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_sign_up_info_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/money_text"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="支付时间："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_sign_up_info_paytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="报 名 人："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_sign_up_info_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="详细信息："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_sign_up_info_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_done_sign_up_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="去完善"
+                android:textColor="@color/Blue"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="报名状态："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_sign_up_info_apply_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_done_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="去缴费"
+                android:textColor="@color/Blue"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:text="考试时间："
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_sign_up_info_examtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/explain_font"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_margin="10dp"
+        android:text="获取报名信息失败或您还没有报名"
+        android:textColor="@color/money_text"
+        android:textSize="@dimen/explain_font"
+        android:textStyle="normal"
+        android:visibility="gone"/>
+</LinearLayout>

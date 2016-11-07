@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FloralWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:text="软考包过班"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/videoclass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:tag="1d9b9ec3a5774a77ae5f50d357ae3551"
+            android:text="软考信息处理技术员包过班"
+            android:textColor="@color/BlueViolet"
+            android:textSize="@dimen/choice_item_font"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/videoclass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:tag="2bf71ae2ae314bfe939955886868be71"
+            android:text="软考程序员包过班"
+            android:textColor="@color/BlueViolet"
+            android:textSize="@dimen/choice_item_font"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/videoclass3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:tag="d987accdcfed41bcb68fd165374153f2"
+            android:text="软考软件设计师包过班"
+            android:textColor="@color/BlueViolet"
+            android:textSize="@dimen/choice_item_font"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/videoclass4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:tag="c52df1f23e714779adb04af9064a0037"
+            android:text="软考软件评测师包过班"
+            android:textColor="@color/BlueViolet"
+            android:textSize="@dimen/choice_item_font"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/videoclass5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:tag="5423ac7f94c048afa4b9fd9ff1d6ce69"
+            android:text="软考信息系统项目管理师包过班"
+            android:textColor="@color/BlueViolet"
+            android:textSize="@dimen/choice_item_font"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/videoclass6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:tag="f797c6de0cc747a39173ed4264443f7d"
+            android:text="软考系统分析师包过班"
+            android:textColor="@color/BlueViolet"
+            android:textSize="@dimen/choice_item_font"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,347 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/layout_bg"
+                android:orientation="vertical"
+                tools:context="com.itee.exam.app.ui.main.DemoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.itee.exam.app.widget.AutoGallery
+            android:id="@+id/lay_header_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="fill_horizontal"
+            android:spacing="1sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/countdown_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="fill_horizontal"
+            android:orientation="vertical"
+            android:spacing="1sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="@drawable/countdown"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5.0dip"
+                        android:text="2016年国家软件考试 "
+                        android:textColor="#232323"
+                        android:textSize="28sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:singleLine="true"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/daojishi_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title">
+
+                        <ImageView
+                            android:id="@+id/describe_iv"
+                            android:layout_width="40.0dip"
+                            android:layout_height="40.0dip"
+                            android:background="@drawable/daojishi"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/describe_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5.0dip"
+                            android:layout_toRightOf="@+id/describe_iv"
+                            android:ellipsize="marquee"
+                            android:text="距离考试还有 "
+                            android:textColor="#232323"
+                            android:textSize="20sp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/days_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:textColor="#ffffff"
+                            android:textSize="62dp"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="47dp"
+                            android:layout_marginBottom="33dp"/>
+
+                        <TextView
+                            android:id="@+id/colon0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_marginRight="3.0dip"
+                            android:layout_toRightOf="@+id/days_tv"
+                            android:text="天"
+                            android:textColor="#232323"
+                            android:textSize="18sp"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/daojishi_rl"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/hours_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/colon1"
+                            android:background="@drawable/daojishiframe"
+                            android:gravity="center"
+                            android:text="23"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/colon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3.0dip"
+                            android:layout_marginRight="3.0dip"
+                            android:layout_toLeftOf="@+id/minutes_tv"
+                            android:text=":"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/minutes_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/colon2"
+                            android:background="@drawable/daojishiframe"
+                            android:gravity="center"
+                            android:text="59"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/colon2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3.0dip"
+                            android:layout_marginRight="3.0dip"
+                            android:layout_toLeftOf="@+id/seconds_tv"
+                            android:text=":"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/seconds_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/daojishiframe"
+                            android:gravity="center"
+                            android:text="59"
+                            android:textSize="20sp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <include layout="@layout/item"/>
+
+                <include
+                    layout="@layout/item2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="软酷快报"
+                    android:textColor="@color/BACK"
+                    android:textSize="@dimen/normal_font"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#bbbbbb"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:text="真题视频解析"
+                    android:textColor="#232323"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:text="更多"
+                    android:textColor="#31b5ff"/>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="软酷软考备考快人“三步”，再也不用担心考不过啦！"
+                        android:textColor="@color/BACK"
+                        android:textSize="@dimen/explain_font"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第一步：软考资料“快人一步”"
+                        android:textColor="@color/BACK"
+                        android:textSize="@dimen/explain_font"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  最新资料，海量真题，教程考纲免费“送”。"
+                        android:textColor="@color/BACK"
+                        android:textSize="@dimen/normal_font"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第二步：特训内容“知己知彼”"
+                        android:textColor="#232323"
+                        android:textSize="@dimen/explain_font"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  技术专题+企业案例，练就真才实学。独家3年真题视频解析，轻松“玩转”考试重难点。"
+                        android:textColor="@color/BACK"
+                        android:textSize="@dimen/normal_font"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第三步：在线学习“战无不胜”"
+                        android:textColor="@color/BACK"
+                        android:textSize="@dimen/explain_font"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  专业导师一对一全程辅导，随时随地答疑解惑，实现导师与学员零距离。"
+                        android:textColor="@color/BACK"
+                        android:textSize="@dimen/normal_font"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/staff_header"/>
+</RelativeLayout>

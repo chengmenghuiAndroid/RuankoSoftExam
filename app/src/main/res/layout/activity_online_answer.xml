@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="300dp"
+                android:layout_height="248dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/online_bg">
+
+                <RelativeLayout
+                    android:id="@+id/rl_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/service_btn_head"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="软考电话"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_tel"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/wuhan_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="19dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="28dp"
+                            android:src="@drawable/service_list_icon_copylocation"/>
+
+                        <TextView
+                            android:id="@+id/tv_wuhan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/iv_icon"
+                            android:text="武汉"
+                            android:textColor="@color/BACK"
+                            android:textSize="17dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_wh_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/tv_wuhan"
+                            android:text="027-87746649"
+                            android:textColor="@color/BACK"
+                            android:textSize="17dp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_wh_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="28dp"
+                            android:onClick="funWhTel"
+                            android:src="@drawable/common_icon_poput_phone"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/wuhan_tel"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginRight="28dp"
+                        android:layout_marginTop="19dp"
+                        android:background="@color/BACK"/>
+
+                    <RelativeLayout
+                        android:id="@+id/shengzheng_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="19dp">
+
+                        <ImageView
+                            android:id="@+id/iv_icon2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="28dp"
+                            android:src="@drawable/service_list_icon_copylocation"/>
+
+                        <TextView
+                            android:id="@+id/tv_shengzheng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/iv_icon2"
+                            android:text="深圳"
+                            android:textColor="@color/BACK"
+                            android:textSize="17dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_sz_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/tv_shengzheng"
+                            android:text="0755-86270028"
+                            android:textColor="@color/BACK"
+                            android:textSize="17dp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_sz_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="28dp"
+                            android:onClick="funSzTel"
+                            android:src="@drawable/common_icon_poput_phone"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/shengzheng_tel"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginRight="28dp"
+                        android:layout_marginTop="19dp"
+                        android:background="@color/BACK"/>
+
+                    <RelativeLayout
+                        android:id="@+id/qunguo_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line2"
+                        android:layout_marginTop="19dp">
+
+                        <ImageView
+                            android:id="@+id/icon3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="28dp"
+                            android:src="@drawable/service_list_icon_copylocation"/>
+
+                        <TextView
+                            android:id="@+id/quanguo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/icon3"
+                            android:text="全国"
+                            android:textColor="@color/BACK"
+                            android:textSize="17dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_qg_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/quanguo"
+                            android:text="027-659-0018"
+                            android:textColor="@color/BACK"
+                            android:textSize="17dp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_qg_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="28dp"
+                            android:onClick="funQgTel"
+                            android:src="@drawable/common_icon_poput_phone"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/online_bg">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mail"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/service_btn_head"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="软考邮箱"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_mail"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginTop="19dp"
+                    android:onClick="funCopyMail">
+
+                    <ImageView
+                        android:id="@+id/iv_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28dp"
+                        android:src="@drawable/service_list_icon_email"/>
+
+                    <TextView
+                        android:id="@+id/tv_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:layout_toRightOf="@+id/iv_mail"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="uprogram@ruankao.com"
+                        android:textColor="@color/BACK"
+                        android:textSize="17dp"/>
+
+                    <ImageView
+                        android:id="@+id/copy_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:src="@drawable/service_list_icon_copy"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/online_bg">
+
+                <RelativeLayout
+                    android:id="@+id/rl_qq"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/service_btn_head"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="软考QQ"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ruan_kao_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_qq"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginTop="19dp"
+                    android:onClick="funQQContent">
+
+                    <ImageView
+                        android:id="@+id/iv_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28dp"
+                        android:src="@drawable/service_list_icon_qq"/>
+
+                    <TextView
+                        android:id="@+id/tv_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:layout_toRightOf="@+id/iv_qq"
+                        android:text="2200935530"
+                        android:textColor="@color/BACK"
+                        android:textSize="17dp"/>
+
+                    <ImageView
+                        android:id="@+id/copy_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:src="@drawable/service_list_icon_copy"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/online_bg">
+
+                <RelativeLayout
+                    android:id="@+id/rl_qq_qun"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/service_btn_head"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="软考QQ群"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ruan_kao_qq_qun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_qq_qun"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginTop="19dp"
+                    android:onClick="funCopyQQQun">
+
+                    <ImageView
+                        android:id="@+id/iv_qq_qun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28dp"
+                        android:src="@drawable/service_list_icon_qq"/>
+
+                    <TextView
+                        android:id="@+id/tv_qq_qun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:layout_toRightOf="@+id/iv_qq_qun"
+                        android:text="251395849"
+                        android:textColor="@color/BACK"
+                        android:textSize="17dp"/>
+
+                    <ImageView
+                        android:id="@+id/copy_qq_qun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:src="@drawable/service_list_icon_copy"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

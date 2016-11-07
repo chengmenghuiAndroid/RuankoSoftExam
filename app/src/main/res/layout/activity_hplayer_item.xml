@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#31b5ff">
+
+        <TextView
+            android:id="@+id/tv_chaptersSort1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="第"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_chaptersSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_chaptersSort1"
+            android:text=" 1 "
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_chaptersSort2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_chaptersSort"
+            android:text="章"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tv_chaptersSort2"
+            android:src="@drawable/circle_dot"/>
+
+        <TextView
+            android:id="@+id/tv_chaptersTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/dot"
+            android:text="下午试卷解析 — 试题一"
+            android:textColor="#ffffff"
+            android:textSize="12dp"/>
+    </RelativeLayout>
+  <!--  <ListView
+        android:id="@+id/activity_hplayer_sectionslist_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>-->
+    <include layout="@layout/activity_learning_video"/>
+    <TextView
+        android:id="@+id/item_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="暂无相关视频课程讲解 !"
+        android:textColor="#232323"
+        android:textSize="12dp"
+        />
+</LinearLayout>

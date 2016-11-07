@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="339dp"
+        android:layout_height="189dp"
+        android:layout_marginTop="52dp"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="软件测评师2015-11真题视频解析"
+            android:layout_marginTop="10dp"
+            android:textColor="#232323"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"/>
+        <ImageView
+            android:id="@+id/video_pic"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/video_title"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到期时间: 2018-08-06"
+            android:paddingTop="3dp"
+            android:textColor="#232323"
+            android:textSize="9sp"
+            android:layout_below="@+id/video_pic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

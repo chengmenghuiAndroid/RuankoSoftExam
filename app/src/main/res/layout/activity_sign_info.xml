@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itee.exam.app.ui.signup.SignInfoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        android:minHeight="?attr/actionBarSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="funSignUp"
+            android:scaleType="centerInside"
+            android:src="@drawable/register_btn_register_n" />
+        <ImageView
+            android:id="@+id/btn_sign_up_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="funSignUpInfo"
+            android:scaleType="centerInside"
+            android:src="@drawable/register_btn_situation_n"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:id="@+id/btn_sign_up_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="funSignUpdateDetails"
+            android:scaleType="centerInside"
+            android:src="@drawable/register_btn_info_n"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

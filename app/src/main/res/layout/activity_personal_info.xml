@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ruanko="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard_map_info_font"
+    android:orientation="vertical"
+    tools:context="com.itee.exam.app.ui.personal.PersonalInfo">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <com.itee.exam.app.widget.RKImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:src="@drawable/customer_default"
+                ruanko:border_color="@android:color/transparent"
+                ruanko:border_width="0dp"
+                ruanko:shape_type="round"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/personal_def_infohead"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffffff"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffcccccc"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:onClick="funNickName"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/title_personal_info_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="用户名："
+                    android:textColor="#232323"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/value_personal_info_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_nickname"
+                    android:layout_toRightOf="@+id/title_personal_info_nickname"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Princess"
+                    android:textColor="#232323"
+                    android:textSize="16dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:onClick="funRealName"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_realname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:visibility="gone"
+                    android:layout_marginRight="30px"/>
+
+                <TextView
+                    android:id="@+id/title_personal_info_realname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="姓   名："
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/value_personal_info_realname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_realname"
+                    android:layout_toRightOf="@+id/title_personal_info_realname"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Princess"
+                    android:textColor="#232323"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:onClick="funTelphone"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:visibility="gone"
+                    android:layout_marginRight="15dp"/>
+
+                <TextView
+                    android:id="@+id/title_personal_info_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="手机号："
+                    android:textColor="#232323"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/value_personal_info_telphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_tel"
+                    android:layout_toRightOf="@+id/title_personal_info_tel"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="13800138000"
+                    android:textColor="#232323"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:onClick="funEmail"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:visibility="gone"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:id="@+id/title_personal_info_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="邮   箱："
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/value_personal_info_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_email"
+                    android:layout_toRightOf="@+id/title_personal_info_email"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="admin@ruanko.com"
+                    android:textColor="#232323"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:onClick="funGroup"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/common_list_icon_go"
+                    android:visibility="gone"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:id="@+id/title_personal_info_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="用户组："
+                    android:textColor="#232323"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/value_personal_info_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_group"
+                    android:layout_toRightOf="@+id/title_personal_info_group"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="学生"
+                    android:textColor="#232323"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:onClick="funPassword"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/personal_list_item_arrow_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/android_list_index"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/title_personal_info_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/personal_list_item_arrow_password"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="修改密码"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/personal_info_center_bg"
+                android:onClick="funExit"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="true"
+                    android:text="退出当前账号"
+                    android:textColor="#232323"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              tools:context="com.itee.exam.app.ui.doexam.AfterExamActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="3dp">
+
+        <ImageView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="OnPreviousQuestion"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/exam_tab_icon_last" />
+
+        <ImageView
+            android:id="@+id/iv_analysis"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="funAnalysis"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_analysis"
+            android:layout_marginLeft="40dp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/30"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginLeft="40dp"/>
+
+        <ImageView
+            android:id="@+id/btn_answer"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/exam_label_icon_answer"
+            android:gravity="center"
+            android:textColor="#31b5ff"
+            android:textSize="16sp"
+            android:onClick="funAnswer"
+            android:layout_marginLeft="30dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:onClick="funAnswer"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_question_edit"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="OnNextQuestion"
+            android:src="@drawable/exam_tab_icon_next"
+            android:layout_marginLeft="40dp"/>
+    </LinearLayout>
+
+</LinearLayout>

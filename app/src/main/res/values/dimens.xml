@@ -1,0 +1,76 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_short_margin">10dp</dimen>
+
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="border">0.5dp</dimen>
+
+    <!-- 头像的宽度高度设置 -->
+    <dimen name="icon_width">60dp</dimen>
+    <dimen name="icon_height">60dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">300dp</dimen>
+
+    <dimen name="slidingmenu_offset">0dp</dimen>
+    <dimen name="shadow_width">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="padding_xlarge">48dp</dimen>
+    <dimen name="padding_text">3dp</dimen>
+
+    <dimen name="border_shape_margin_top">-1dp</dimen>
+
+    <dimen name="login_logo_font">64sp</dimen>
+
+    <!-- 大号字体 -->
+    <dimen name="big_font">24sp</dimen>
+    <!-- 说明补充正文 -->
+    <dimen name="explain_font">16sp</dimen>
+    <!-- 计时字体 -->
+    <dimen name="time_font">30sp</dimen>
+
+    <!-- 大号按钮字体 -->
+    <dimen name="big_button_font">24sp</dimen>
+
+    <!--ToolBar 字体 -->
+    <dimen name="toolbar_font">18sp</dimen>
+
+    <!-- 界面标题字体 -->
+    <dimen name="title_font">18sp</dimen>
+    <dimen name="map_info_title_font">10sp</dimen>
+    <!-- 界面字体 -->
+    <dimen name="normal_font">14sp</dimen>
+    <dimen name="small_font">10sp</dimen>
+    <dimen name="radio_button_font">7sp</dimen>
+    <dimen name="map_info_normal_font">8sp</dimen>
+    <dimen name="choice_item_font">18sp</dimen>
+    <!-- 答题卡-->
+    <dimen name="answer_sheet_btn_size">45dp</dimen>
+    <!--Welcome sliding page  -->
+    <dimen name="welcome_images_size">360.0dip</dimen>
+    <dimen name="welcome_images_margin_top">0.0dip</dimen>
+    <dimen name="welcome_heading_margin_bottom">12.0dip</dimen>
+    <dimen name="welcome_text_margin">48.0dip</dimen>
+    <dimen name="welcome_heading">24.0sp</dimen>
+    <dimen name="welcome_text_margin_bottom">12.0dip</dimen>
+    <dimen name="welcome_content_min_height">96.0dip</dimen>
+    <dimen name="welcome_content">16.0sp</dimen>
+
+    <!--修改密码-->
+    <dimen name="change_psw_top">40dp</dimen>
+    <dimen name="change_psw_left">29dp</dimen>
+    <dimen name="change_psw_space_bottom">21dp</dimen>
+    <dimen name="change_psw_space_right">7dp</dimen>
+    <dimen name="change_psw_btn_left">62dp</dimen>
+    <dimen name="change_psw_btn_space">20dp</dimen>
+    <dimen name="change_psw_btn_height">30dp</dimen>
+    <dimen name="change_psw_code_wight">77dp</dimen>
+    <dimen name="change_psw_code_height">25dp</dimen>
+    <dimen name="change_psw_right_space">27dp</dimen>
+
+</resources>
